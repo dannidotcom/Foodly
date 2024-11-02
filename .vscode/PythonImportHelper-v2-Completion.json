@@ -17,6 +17,31 @@
         "documentation": {}
     },
     {
+        "label": "graphene",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "graphene",
+        "description": "graphene",
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "users.schema",
+        "description": "users.schema",
+        "isExtraImport": true,
+        "detail": "users.schema",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "importPath": "users.schema",
+        "description": "users.schema",
+        "isExtraImport": true,
+        "detail": "users.schema",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -54,6 +79,22 @@
         "description": "django.contrib",
         "isExtraImport": true,
         "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -298,6 +339,30 @@
         "documentation": {}
     },
     {
+        "label": "Utilisateur",
+        "importPath": "users.models.utilisateur",
+        "description": "users.models.utilisateur",
+        "isExtraImport": true,
+        "detail": "users.models.utilisateur",
+        "documentation": {}
+    },
+    {
+        "label": "Utilisateur",
+        "importPath": "users.models.utilisateur",
+        "description": "users.models.utilisateur",
+        "isExtraImport": true,
+        "detail": "users.models.utilisateur",
+        "documentation": {}
+    },
+    {
+        "label": "Utilisateur",
+        "importPath": "users.models.utilisateur",
+        "description": "users.models.utilisateur",
+        "isExtraImport": true,
+        "detail": "users.models.utilisateur",
+        "documentation": {}
+    },
+    {
         "label": "Commande",
         "importPath": "orders.models.commande",
         "description": "orders.models.commande",
@@ -402,6 +467,38 @@
         "documentation": {}
     },
     {
+        "label": "UtilisateurType",
+        "importPath": "users.schema.utilisateur_type",
+        "description": "users.schema.utilisateur_type",
+        "isExtraImport": true,
+        "detail": "users.schema.utilisateur_type",
+        "documentation": {}
+    },
+    {
+        "label": "UtilisateurService",
+        "importPath": "users.services.utilisateur_service",
+        "description": "users.services.utilisateur_service",
+        "isExtraImport": true,
+        "detail": "users.services.utilisateur_service",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoObjectType",
+        "importPath": "graphene_django.types",
+        "description": "graphene_django.types",
+        "isExtraImport": true,
+        "detail": "graphene_django.types",
+        "documentation": {}
+    },
+    {
+        "label": "GraphQLView",
+        "importPath": "graphene_django.views",
+        "description": "graphene_django.views",
+        "isExtraImport": true,
+        "detail": "graphene_django.views",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -417,6 +514,33 @@
         "description": "core.asgi",
         "peekOfCode": "application = get_asgi_application()",
         "detail": "core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "kind": 6,
+        "importPath": "core.schema",
+        "description": "core.schema",
+        "peekOfCode": "class Query(UtilisateurQuery, graphene.ObjectType):\n    pass\nclass Mutation(UtilisateurMutation, graphene.ObjectType):\n    pass\nschema = graphene.Schema(query=Query, mutation=Mutation)",
+        "detail": "core.schema",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "kind": 6,
+        "importPath": "core.schema",
+        "description": "core.schema",
+        "peekOfCode": "class Mutation(UtilisateurMutation, graphene.ObjectType):\n    pass\nschema = graphene.Schema(query=Query, mutation=Mutation)",
+        "detail": "core.schema",
+        "documentation": {}
+    },
+    {
+        "label": "schema",
+        "kind": 5,
+        "importPath": "core.schema",
+        "description": "core.schema",
+        "peekOfCode": "schema = graphene.Schema(query=Query, mutation=Mutation)",
+        "detail": "core.schema",
         "documentation": {}
     },
     {
@@ -496,7 +620,16 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'core.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "peekOfCode": "WSGI_APPLICATION = 'core.wsgi.application'\nGRAPHENE = {\n    'SCHEMA': 'core.schema.schema'\n}\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "GRAPHENE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "GRAPHENE = {\n    'SCHEMA': 'core.schema.schema'\n}\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -577,7 +710,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('users.urls'))\n]",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -726,12 +859,102 @@
         "documentation": {}
     },
     {
+        "label": "UtilisateurRepository",
+        "kind": 6,
+        "importPath": "users.repositories.utilisateur_repository",
+        "description": "users.repositories.utilisateur_repository",
+        "peekOfCode": "class UtilisateurRepository:\n    @staticmethod\n    def get_by_id(id):\n        return Utilisateur.objects.get(id=id)\n    @staticmethod\n    def get_all():\n        return Utilisateur.objects.all()\n    @staticmethod\n    def create(data):\n        utilisateur = Utilisateur(**data)",
+        "detail": "users.repositories.utilisateur_repository",
+        "documentation": {}
+    },
+    {
+        "label": "CreerUtilisateur",
+        "kind": 6,
+        "importPath": "users.schema.utilisateur_mutations",
+        "description": "users.schema.utilisateur_mutations",
+        "peekOfCode": "class CreerUtilisateur(graphene.Mutation):\n    class Arguments:\n        email = graphene.String(required=True)\n        nom = graphene.String(required=True)\n        prenom = graphene.String(required=True)\n        role = graphene.String(required=True)\n        telephone = graphene.String(required=True)\n        mot_de_passe = graphene.String(required=True)\n    utilisateur = graphene.Field(UtilisateurType)\n    def mutate(self, info, email, nom, prenom, role, telephone, mot_de_passe):",
+        "detail": "users.schema.utilisateur_mutations",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateUtilisateur",
+        "kind": 6,
+        "importPath": "users.schema.utilisateur_mutations",
+        "description": "users.schema.utilisateur_mutations",
+        "peekOfCode": "class UpdateUtilisateur(graphene.Mutation):\n    class Arguments:\n        id = graphene.ID(required=True)\n        email = graphene.String()\n        nom = graphene.String()\n        prenom = graphene.String()\n        role = graphene.String()\n        telephone = graphene.String()\n        mot_de_passe = graphene.String()\n    utilisateur = graphene.Field(UtilisateurType)",
+        "detail": "users.schema.utilisateur_mutations",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteUtilisateur",
+        "kind": 6,
+        "importPath": "users.schema.utilisateur_mutations",
+        "description": "users.schema.utilisateur_mutations",
+        "peekOfCode": "class DeleteUtilisateur(graphene.Mutation):\n    class Arguments:\n        id = graphene.ID(required=True)\n    success = graphene.Boolean()\n    def mutate(self, info, id):\n        success = UtilisateurService.sup_utilisateur(id)\n        return DeleteUtilisateur(success=success)\nclass GetAllUtilisateurs(graphene.Mutation):\n    utilisateurs = graphene.List(UtilisateurType)\n    def mutate(self, info):",
+        "detail": "users.schema.utilisateur_mutations",
+        "documentation": {}
+    },
+    {
+        "label": "GetAllUtilisateurs",
+        "kind": 6,
+        "importPath": "users.schema.utilisateur_mutations",
+        "description": "users.schema.utilisateur_mutations",
+        "peekOfCode": "class GetAllUtilisateurs(graphene.Mutation):\n    utilisateurs = graphene.List(UtilisateurType)\n    def mutate(self, info):\n        utilisateurs = UtilisateurService.get_all_utilisateur()\n        return GetAllUtilisateurs(utilisateurs=utilisateurs)\n# Assemblage des Mutations dans une Classe Mutation\nclass Mutation(graphene.ObjectType):\n    creer_utilisateur = CreerUtilisateur.Field()\n    update_utilisateur = UpdateUtilisateur.Field()\n    delete_utilisateur = DeleteUtilisateur.Field()",
+        "detail": "users.schema.utilisateur_mutations",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "kind": 6,
+        "importPath": "users.schema.utilisateur_mutations",
+        "description": "users.schema.utilisateur_mutations",
+        "peekOfCode": "class Mutation(graphene.ObjectType):\n    creer_utilisateur = CreerUtilisateur.Field()\n    update_utilisateur = UpdateUtilisateur.Field()\n    delete_utilisateur = DeleteUtilisateur.Field()\n    get_all_utilisateurs = GetAllUtilisateurs.Field()",
+        "detail": "users.schema.utilisateur_mutations",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "kind": 6,
+        "importPath": "users.schema.utilisateur_queries",
+        "description": "users.schema.utilisateur_queries",
+        "peekOfCode": "class Query(graphene.ObjectType):\n    utilisateur = graphene.Field(UtilisateurType, id=graphene.Int())\n    tous_les_utilisateurs = graphene.List(UtilisateurType)\n    def resolve_utilisateur(root, info, id):\n        return UtilisateurService.obtenir_utilisateur(id)\n    def resolve_tous_les_utilisateurs(root, info):\n        return UtilisateurService.get_all_utilisateur()",
+        "detail": "users.schema.utilisateur_queries",
+        "documentation": {}
+    },
+    {
+        "label": "UtilisateurType",
+        "kind": 6,
+        "importPath": "users.schema.utilisateur_type",
+        "description": "users.schema.utilisateur_type",
+        "peekOfCode": "class UtilisateurType(DjangoObjectType):\n    class Meta:\n        model = Utilisateur\n        #fields = '__all__'\n        exclude = ['mot_de_passe']",
+        "detail": "users.schema.utilisateur_type",
+        "documentation": {}
+    },
+    {
+        "label": "UtilisateurService",
+        "kind": 6,
+        "importPath": "users.services.utilisateur_service",
+        "description": "users.services.utilisateur_service",
+        "peekOfCode": "class UtilisateurService:\n    @staticmethod\n    def creer_utilisateur(data):\n        utilisateur = UtilisateurRepository.create(data)\n        return utilisateur\n    @staticmethod\n    def obtenir_utilisateur(id):\n        return UtilisateurRepository.get_by_id(id)\n    @staticmethod\n    def get_all_utilisateur():",
+        "detail": "users.services.utilisateur_service",
+        "documentation": {}
+    },
+    {
         "label": "UsersConfig",
         "kind": 6,
         "importPath": "users.apps",
         "description": "users.apps",
         "peekOfCode": "class UsersConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'users'",
         "detail": "users.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "users.urls",
+        "description": "users.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"graphql/\", GraphQLView.as_view(graphiql=True, schema=schema)),\n]",
+        "detail": "users.urls",
         "documentation": {}
     },
     {
